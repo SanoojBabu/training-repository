@@ -61,7 +61,7 @@ public class MainProject {
 
 				switch (c) {
 				case "A": {
-						arrayList.forEach(System.out::println);
+//					arrayList.forEach(System.out::println);
 					for (Song song : arrayList) {
 						System.out.println(song.getSongTitle());
 						Thread.sleep(2000);
@@ -71,13 +71,16 @@ public class MainProject {
 
 				case "B": {
 					Random random = new Random();
-					int randomint = random.nextInt(10);
+					int randomint = random.nextInt(arrayList.size());
 					System.out.println(arrayList.get(randomint).toString());
 					break;
 				}
 
 				case "C": {
-					System.out.println("Please enter a number between 1 to 10");
+					for (Song song : arrayList) {
+						System.out.println(song.getSongID()+". "+song.getSongTitle());
+					}
+					System.out.println("Please enter a SongID");
 					int b;
 					b = scanner.nextInt();
 					System.out.println(arrayList.get(b - 1));
