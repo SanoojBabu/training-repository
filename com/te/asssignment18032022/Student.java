@@ -1,4 +1,4 @@
-package com.te.collectioninterfaces.list;
+package com.te.asssignment18032022;
 
 public class Student implements Comparable {
 	private int sId;

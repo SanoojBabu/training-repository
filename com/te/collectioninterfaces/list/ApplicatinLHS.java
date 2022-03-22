@@ -16,5 +16,4 @@ public class ApplicatinLHS {
 			System.out.println(student);
 		}
 	}
-
 }

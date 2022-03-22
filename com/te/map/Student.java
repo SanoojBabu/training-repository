@@ -1,4 +1,4 @@
-package com.te.collectioninterfaces.list;
+package com.te.map;
 
 public class Student implements Comparable {
 	private int sId;
@@ -55,35 +55,35 @@ public class Student implements Comparable {
 		return 0;
 	}
 
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + sAge;
-//		result = prime * result + sId;
-//		result = prime * result + ((sName == null) ? 0 : sName.hashCode());
-//		return result;
-//	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + sAge;
+		result = prime * result + sId;
+		result = prime * result + ((sName == null) ? 0 : sName.hashCode());
+		return result;
+	}
 
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Student other = (Student) obj;
-//		if (sAge != other.sAge)
-//			return false;
-//		if (sId != other.sId)
-//			return false;
-//		if (sName == null) {
-//			if (other.sName != null)
-//				return false;
-//		} else if (!sName.equals(other.sName))
-//			return false;
-//		return true;
-//	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (sAge != other.sAge)
+			return false;
+		if (sId != other.sId)
+			return false;
+		if (sName == null) {
+			if (other.sName != null)
+				return false;
+		} else if (!sName.equals(other.sName))
+			return false;
+		return true;
+	}
 
 }
